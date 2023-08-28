@@ -10,7 +10,7 @@ import javax.ws.rs.core.MediaType;
 
 import io.quarkus.qute.TemplateInstance;
 
-@Path("/")
+@Path("/welcome")
 public class WelcomeResource {
     
     @Inject
@@ -19,7 +19,7 @@ public class WelcomeResource {
     @GET
     @Produces(MediaType.TEXT_HTML)
     public TemplateInstance get() {
-        return templates.welcome();
+        return templates.welcome(null);
     }
 
 }

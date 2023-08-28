@@ -5,7 +5,7 @@ projects:
   - name: quarkus-petclinic
     source:
       type: git
-      location: 'https://github.com/redhat-developer-demos/quarkus-petclinic.git'
+      location: 'https://github.com/Supriya-Arora/quarkus-petclinic.git'
       branch: master
 components:
   - type: chePlugin
@@ -35,11 +35,11 @@ components:
     memoryLimit: 512Mi
     env:
       - name: POSTGRESQL_USER
-        value: developer
+        value: postgresql
       - name: POSTGRESQL_PASSWORD
-        value: developer
+        value: changeme
       - name: POSTGRESQL_DATABASE
-        value: mydb
+        value: petclinic
     volumes:
       - name: postgres-storage
         containerPath: /var/lib/pgsql/data

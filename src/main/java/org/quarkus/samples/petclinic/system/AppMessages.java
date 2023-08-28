@@ -5,9 +5,15 @@ import io.quarkus.qute.i18n.MessageBundle;
 
 @MessageBundle
 public interface AppMessages {
-    
+
+    @Message("Quarkus Pet Clinic")
+    String title();
+
     @Message("Find Owner")
     String find_owner();
+
+    @Message("First Name")
+    String first_name();
 
     @Message("Last Name")
     String last_name();
@@ -23,6 +29,12 @@ public interface AppMessages {
 
     @Message("Name")
     String name();
+
+    @Message("Email")
+    String email();
+
+    @Message("Password")
+    String password();
 
     @Message("Address")
     String address();
@@ -41,6 +53,18 @@ public interface AppMessages {
 
     @Message("Error")
     String error();
+
+    @Message("User not found!")
+    String error_user_not_found();
+
+    @Message("Incorrect username or password!")
+    String error_user_credentials_incorrect();
+
+    @Message("Please provide username and password!")
+    String error_user_credentials_empty();
+
+    @Message("User authentication has failed!")
+    String error_user_authentication_failed();
 
     @Message("None")
     String none();
@@ -98,5 +122,26 @@ public interface AppMessages {
 
     @Message("Something happened...")
     String something_wrong();
+
+    @Message("Welcome to")
+    String welcome_to();
+
+    @Message("Login to")
+    String login_to();
+
+    @Message("Login")
+    String login();
+
+    @Message("Back to")
+    String back_to();
+
+    @Message("Log out")
+    String logout();
+
+    @Message("User")
+    String user();
+
+    @Message("Information")
+    String information();
 
 }

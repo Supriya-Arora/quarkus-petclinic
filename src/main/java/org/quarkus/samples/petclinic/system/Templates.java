@@ -15,7 +15,7 @@ import io.quarkus.qute.TemplateInstance;
 
 @CheckedTemplate
 public class Templates {
-    public static native TemplateInstance welcome();
+    public static native TemplateInstance welcome(User user);
 
     public static native TemplateInstance error(String message);
 
@@ -32,4 +32,8 @@ public class Templates {
     public static native TemplateInstance createOrUpdatePetForm(Owner owner, Pet pet, List<PetType> petTypes, Map<String, String> errors);
 
     public static native TemplateInstance createOrUpdateVisitForm(Pet pet, Visit visit, Map<String, String> errors);
+
+    public static native TemplateInstance userDetails(User user, Error error);
+
+    public static native TemplateInstance login(String email, Error error);
 }

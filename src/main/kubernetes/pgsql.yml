@@ -37,11 +37,11 @@ spec:
               containerPort: 5432
           env:
             - name: PG_USER_PASSWORD
-              value: developer
+              value: changeme
             - name: PG_USER_NAME
-              value: developer
+              value: petclinic
             - name: PG_DATABASE
-              value: mydb
+              value: petclinic
             - name: PG_NETWORK_MASK
               value: all
             - name: PG_MAX_CONNECTIONS

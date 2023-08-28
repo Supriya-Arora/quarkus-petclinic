@@ -18,8 +18,8 @@ import io.quarkus.qute.TemplateInstance;
 @ApplicationScoped
 public class TemplatesLocale {
     
-    public TemplateInstance welcome() {
-        return Templates.welcome().setAttribute("locale", getConfiguredLocale());
+    public TemplateInstance welcome(User user) {
+        return Templates.welcome(user).setAttribute("locale", getConfiguredLocale());
     }
 
     public TemplateInstance error(String message) {
@@ -52,6 +52,14 @@ public class TemplatesLocale {
 
     public TemplateInstance createOrUpdateVisitForm(Pet pet, Visit visit, Map<String, String> errors) {
         return Templates.createOrUpdateVisitForm(pet, visit, errors).setAttribute("locale", getConfiguredLocale());
+    }
+
+    public TemplateInstance userDetails(User user, Error error) {
+        return Templates.userDetails(user, error).setAttribute("locale", getConfiguredLocale());
+    }
+
+    public TemplateInstance login(String email, Error error) {
+        return Templates.login(email, error).setAttribute("locale", getConfiguredLocale());
     }
 
     protected Locale getConfiguredLocale() {
